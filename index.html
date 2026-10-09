@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <title>SignalShield — evidence-first scam analysis</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/"><span class="brand-mark">S</span><span>Signal<span class="accent">Shield</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span> Evidence-first security</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span>AI + CYBERSECURITY</span><span class="line"></span><span>MESSAGE TRIAGE</span></div>
+        <h1>Trust the evidence.<br><span class="gradient">Not the message.</span></h1>
+        <p class="hero-copy">Analyze suspicious scholarship offers, job messages, payment requests, and AI-directed prompt injections. See exactly what triggered concern—and what to verify next.</p>
+        <div class="hero-pills"><span>↳ Evidence highlighted</span><span>↳ Explainable signals</span><span>↳ Safer next steps</span></div>
+      </section>
+
+      <section class="workspace">
+        <div class="input-panel panel">
+          <div class="panel-heading">
+            <div><div class="step">01 / INSPECT</div><h2>Paste a message</h2></div>
+            <span class="privacy-tag">Local-first checks</span>
+          </div>
+          <label for="context">What kind of message is it?</label>
+          <select id="context">
+            <option value="general">General message</option>
+            <option value="scholarship">Scholarship / university</option>
+            <option value="job">Job / recruiter</option>
+            <option value="payment">Payment / financial</option>
+            <option value="ai-agent">Message for an AI agent</option>
+          </select>
+          <label for="message">Message content</label>
+          <textarea id="message" maxlength="12000" placeholder="Paste the suspicious email or message here…&#10;&#10;Tip: remove private information first."></textarea>
+          <div class="input-footer"><span id="char-count">0 / 12,000</span><button id="clear-btn" class="text-button">Clear</button></div>
+          <div class="sample-row"><span>TRY A DEMO</span><button class="sample" data-sample="scholarship">Fake scholarship</button><button class="sample" data-sample="injection">AI prompt injection</button><button class="sample" data-sample="ordinary">Ordinary message</button></div>
+          <button id="analyze-btn" class="primary-button"><span>Analyze message</span><span class="arrow">↗</span></button>
+          <p class="microcopy">Demo analysis only. Do not paste passwords, verification codes, or private information.</p>
+        </div>
+
+        <div class="results-panel panel" id="results-panel">
+          <div class="empty-state" id="empty-state">
+            <div class="radar"><div class="radar-ring ring-a"></div><div class="radar-ring ring-b"></div><div class="radar-ring ring-c"></div><span>⌁</span></div>
+            <div class="step">02 / RESULTS</div>
+            <h2>Your evidence report<br>will appear here.</h2>
+            <p>Run an analysis to see indicators, quoted evidence, and independent verification steps.</p>
+            <div class="empty-bottom"><span class="tiny-lock">◇</span> No account required · No message history saved by this demo</div>
+          </div>
+          <div id="loading-state" class="loading-state hidden"><div class="spinner"></div><h2>Inspecting message…</h2><p>Checking for pressure tactics, suspicious requests, and AI-directed instructions.</p></div>
+          <div id="report" class="report hidden"></div>
+        </div>
+      </section>
+
+      <section class="how-section">
+        <div class="section-intro"><div class="step">THE APPROACH</div><h2>From vague suspicion<br>to actionable evidence.</h2></div>
+        <div class="feature-grid">
+          <article class="feature"><span class="feature-num">01</span><div class="feature-icon">⌕</div><h3>Extract signals</h3><p>Detect pressure tactics, sensitive-data requests, unusual payment methods, suspicious links, and AI-directed instructions.</p></article>
+          <article class="feature"><span class="feature-num">02</span><div class="feature-icon">▤</div><h3>Show the evidence</h3><p>Every local warning includes the matching text and a plain-language explanation, so users can inspect the reasoning.</p></article>
+          <article class="feature"><span class="feature-num">03</span><div class="feature-icon">↗</div><h3>Verify independently</h3><p>Get a practical checklist that avoids trusting links, contact details, or claims supplied by the suspicious message itself.</p></article>
+        </div>
+      </section>
+
+      <section class="disclaimer"><span class="disclaimer-icon">i</span><p><strong>A risk signal is not a verdict.</strong> SignalShield is a prototype for message triage. It does not authenticate senders, browse or resolve links, inspect attachments, or guarantee that a message is safe or fraudulent. Always verify through a trusted, independently sourced channel.</p></section>
+    </main>
+    <footer><div class="brand small-brand"><span class="brand-mark">S</span><span>Signal<span class="accent">Shield</span></span></div><span>Built for safer digital decisions.</span><span class="footer-right">AI + Cybersecurity · Prototype</span></footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
